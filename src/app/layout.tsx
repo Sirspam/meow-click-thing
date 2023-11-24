@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'meow click thing',
-  description: 'I HAVE NO IDEA WHAT I AM DOING',
+  description: 'click the cat',
 }
 
 export default function RootLayout({
@@ -17,11 +17,13 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <ThemeProvider>
+        <html lang="en">
             <body className={inter.className}>
-                <SiteHeader/>
-                {children}
+                <ThemeProvider>
+                    <SiteHeader/>
+                    {children}
+                </ThemeProvider>
             </body>
-        </ThemeProvider>
+        </html>
     )
 }

@@ -14,6 +14,7 @@ interface Theme
 
 const ThemeContext = createContext<Theme | null>(null)
 
+// I should just use next-themes next time
 function getInitialTheme() : string {
     if (typeof window !== "undefined" && window.localStorage) {
         const storedPrefs = window.localStorage.getItem("color-theme")
@@ -37,17 +38,22 @@ export function useTheme() {
 }
 
 export default function ThemeProvider(props: Props){
-    const [theme, setTheme] = useState("dark")
+    const [mounted, setMounted] = useState(false)
+    const [theme, setTheme] = useState(getInitialTheme())
 
     useEffect(() => {
-        setTheme(getInitialTheme())
+        setMounted(true)
     }, [])
+
+    if (!mounted) {
+        return null
+    }
 
     return (
         <ThemeContext.Provider value={{theme, setTheme}}>
-            <html lang="en" className={theme}>
+            <div className={theme}>
                 {props.children}
-            </html>
+            </div>
         </ThemeContext.Provider>
     )
 }
