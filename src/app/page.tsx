@@ -20,7 +20,7 @@ export default function Home() {
     }, [])
 
     return (
-    <main className="flex items-center justify-center h-screen bg-cyan-100 dark:bg-brown">
+    <main className="flex items-center justify-center h-screen bg-cyan-100 dark:bg-night-rider-950">
         {theme === "dark" ?
             <NyaSoundImage imgPath='/chocola_mini_sitting.png' imgAlt='Chocola' mp3Path='/chocola_meow.mp3'/> :
             <NyaSoundImage imgPath='/vanilla_mini_sitting.png' imgAlt='Vanilla' mp3Path='/vanilla_meow.mp3'/>
