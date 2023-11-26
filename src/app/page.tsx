@@ -1,6 +1,6 @@
 "use client"
 
-import NyaSoundImage from "@/app/components/NyaSoundImage";
+import NyaSoundImage from "@/app/components/ui/NyaSoundImage";
 import {useTheme} from "@/app/components/ThemeProvider";
 import {useEffect} from "react";
 
@@ -20,7 +20,7 @@ export default function Home() {
     }, [])
 
     return (
-    <main className="flex items-center justify-center h-screen bg-cyan-100 dark:bg-night-rider-950">
+    <main className="flex h-full items-center justify-center bg-cyan-50 dark:bg-night-rider-950">
         {theme === "dark" ?
             <NyaSoundImage imgPath='/chocola_mini_sitting.png' imgAlt='Chocola' mp3Path='/chocola_meow.mp3'/> :
             <NyaSoundImage imgPath='/vanilla_mini_sitting.png' imgAlt='Vanilla' mp3Path='/vanilla_meow.mp3'/>

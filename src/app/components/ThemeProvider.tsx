@@ -51,7 +51,7 @@ export default function ThemeProvider(props: Props){
 
     return (
         <ThemeContext.Provider value={{theme, setTheme}}>
-            <div className={theme}>
+            <div className={`${theme} h-full flex flex-col`}>
                 {props.children}
             </div>
         </ThemeContext.Provider>
