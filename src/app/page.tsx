@@ -15,12 +15,12 @@ export default function Home() {
 
     // Preload both images so they both load immediately when the theme is toggled
     useEffect(() => {
-        new Image().src = "/chocola_mini_sitting.png";
-        new Image().src = "/vanilla_mini_sitting.png";
+        new Image().src = "/chocola_mini_sitting.png"
+        new Image().src = "/vanilla_mini_sitting.png"
     }, [])
 
     return (
-    <main className="flex h-full items-center justify-center bg-cyan-50 dark:bg-night-rider-950">
+    <main className="flex h-full items-center justify-center p-10 lg:p-0 bg-cyan-50 dark:bg-night-rider-950">
         {theme === "dark" ?
             <NyaSoundImage imgPath='/chocola_mini_sitting.png' imgAlt='Chocola' mp3Path='/chocola_meow.mp3'/> :
             <NyaSoundImage imgPath='/vanilla_mini_sitting.png' imgAlt='Vanilla' mp3Path='/vanilla_meow.mp3'/>
