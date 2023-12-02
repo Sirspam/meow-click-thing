@@ -1,6 +1,5 @@
 "use client"
 
-import Image from 'next/image'
 import useSound from "use-sound";
 
 interface Props {
@@ -13,6 +12,7 @@ export default function NyaSoundImage(props: Props) {
     const [play] = useSound(props.mp3Path, { volume: 0.1 });
 
     return (
-        <Image src={props.imgPath} alt={props.imgAlt} width={500} height={500} onClick={() => play()} priority={true}></Image>
+        // eslint-disable-next-line @next/next/no-img-element
+        <img className="max-w-full max-h-full sm:max-w-[500px] flex aspect-auto" src={props.imgPath} alt={props.imgAlt} onClick={() => play()}/>
     )
 }
