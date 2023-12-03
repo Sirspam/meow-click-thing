@@ -28,6 +28,7 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    environment: github-pages
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -48,6 +49,13 @@ jobs:
             echo "Unable to determine package manager"
             exit 1
           fi
+      - name: Create .env with Github Secrets and run script
+        run: |
+          touch .env
+          echo REPO_PATH=$REPO_PATH >> .env
+          npm run script-that-accesses-env-vars
+        env:
+          REPO_PATH: ${{ secrets.REPO_PATH }}
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
