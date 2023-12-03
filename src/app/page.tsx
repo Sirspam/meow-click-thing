@@ -15,23 +15,35 @@ export default function Home() {
 
   // Preload both images so they both load immediately when the theme is toggled
   useEffect(() => {
-    new Image().src = `${process.env.REPO_PATH || ""}/chocola_mini_sitting.png`
-    new Image().src = `${process.env.REPO_PATH || ""}/vanilla_mini_sitting.png`
+    new Image().src = `${
+      process.env.NEXT_PUBLIC_REPO_PATH || ""
+    }/chocola_mini_sitting.png`
+    new Image().src = `${
+      process.env.NEXT_PUBLIC_REPO_PATH || ""
+    }/vanilla_mini_sitting.png`
   }, [])
 
   return (
     <main className="flex overflow-hidden h-full items-center justify-center p-10 lg:p-0 bg-cyan-50 dark:bg-night-rider-950">
       {theme === "dark" ? (
         <NyaSoundImage
-          imgPath={`${process.env.REPO_PATH || ""}/chocola_mini_sitting.png`}
+          imgPath={`${
+            process.env.NEXT_PUBLIC_REPO_PATH || ""
+          }/chocola_mini_sitting.png`}
           imgAlt="Chocola"
-          mp3Path={`${process.env.REPO_PATH || ""}/chocola_meow.mp3`}
+          mp3Path={`${
+            process.env.NEXT_PUBLIC_REPO_PATH || ""
+          }/chocola_meow.mp3`}
         />
       ) : (
         <NyaSoundImage
-          imgPath={`${process.env.REPO_PATH || ""}/vanilla_mini_sitting.png`}
+          imgPath={`${
+            process.env.NEXT_PUBLIC_REPO_PATH || ""
+          }/vanilla_mini_sitting.png`}
           imgAlt="Vanilla"
-          mp3Path={`${process.env.REPO_PATH || ""}/vanilla_meow.mp3`}
+          mp3Path={`${
+            process.env.NEXT_PUBLIC_REPO_PATH || ""
+          }/vanilla_meow.mp3`}
         />
       )}
     </main>
