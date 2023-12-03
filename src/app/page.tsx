@@ -17,10 +17,10 @@ export default function Home() {
   useEffect(() => {
     new Image().src = `${
       process.env.NEXT_PUBLIC_REPO_PATH || ""
-    }/chocola_mini_sitting.png`
+    }/chocola_mini_sitting.webp`
     new Image().src = `${
       process.env.NEXT_PUBLIC_REPO_PATH || ""
-    }/vanilla_mini_sitting.png`
+    }/vanilla_mini_sitting.webp`
   }, [])
 
   return (
@@ -29,7 +29,7 @@ export default function Home() {
         <NyaSoundImage
           imgPath={`${
             process.env.NEXT_PUBLIC_REPO_PATH || ""
-          }/chocola_mini_sitting.png`}
+          }/chocola_mini_sitting.webp`}
           imgAlt="Chocola"
           mp3Path={`${
             process.env.NEXT_PUBLIC_REPO_PATH || ""
@@ -39,7 +39,7 @@ export default function Home() {
         <NyaSoundImage
           imgPath={`${
             process.env.NEXT_PUBLIC_REPO_PATH || ""
-          }/vanilla_mini_sitting.png`}
+          }/vanilla_mini_sitting.webp`}
           imgAlt="Vanilla"
           mp3Path={`${
             process.env.NEXT_PUBLIC_REPO_PATH || ""
