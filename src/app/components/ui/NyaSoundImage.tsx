@@ -9,7 +9,7 @@ interface Props {
 }
 
 export default function NyaSoundImage(props: Props) {
-  const [play] = useSound(props.mp3Path, { volume: 0.3 })
+  const [play] = useSound(props.mp3Path, { volume: 0.5 })
 
   return (
     // eslint-disable-next-line @next/next/no-img-element
