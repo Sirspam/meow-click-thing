@@ -2,7 +2,7 @@ import { Button } from "@/app/components/ui/button"
 
 export default function SiteFooter() {
   return (
-    <header className="h-12 px-3 flex items-center justify-between border-t-2 border-cyan-300 dark:border-night-rider-500 bg-cyan-200 dark:bg-night-rider-900">
+    <header className="h-12 flex items-center justify-between border-t-2 border-cyan-300 dark:border-night-rider-500 bg-cyan-200 dark:bg-night-rider-900">
       <div className="container flex max-w-screen-2xl justify-between items-center">
         <a target="_blank" href="https://github.com/Sirspam/meow-click-thing">
           <Button className="fill-current" variant="ghost" size="icon">
