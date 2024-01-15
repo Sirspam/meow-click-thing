@@ -1,8 +1,7 @@
 "use client"
 
-import {useTheme} from "@/app/components/ThemeProvider";
-import {Button} from "@/app/components/ui/button";
-import NyaSoundImage from "@/app/components/ui/NyaSoundImage";
+import {useTheme} from "@/app/_components/ThemeProvider";
+import {Button} from "@/components/ui/button";
 import {Moon, Sun} from "lucide-react";
 
 export default function ThemeToggle() {

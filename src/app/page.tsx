@@ -1,7 +1,7 @@
 "use client"
 
-import NyaSoundImage from "@/app/components/ui/NyaSoundImage"
-import { useTheme } from "@/app/components/ThemeProvider"
+import NyaSoundImage from "@/app/_components/ui/NyaSoundImage"
+import { useTheme } from "@/app/_components/ThemeProvider"
 import { useEffect } from "react"
 
 interface NyaSoundImageValues {
