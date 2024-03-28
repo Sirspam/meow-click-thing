@@ -9,11 +9,7 @@ export default function Home() {
   // A .env.local is needed for local development, which overrides the .env in the repo
   // There surely must be a better way to do go about this, but I'm not sure how to do it
   function ReturnLocalOrProdPath(path: string) {
-    console.log(
-      `${process.env.NEXT_PUBLIC_REPO_PATH || ""}/chocola_mini_sitting.webph`,
-    )
-    console.log(process.env.NEXT_PUBLIC_REPO_PATH || "" + "/" + path)
-    return process.env.NEXT_PUBLIC_REPO_PATH || "" + "/" + path
+    return (process.env.NEXT_PUBLIC_REPO_PATH || "") + "/" + path
   }
 
   const { theme, setTheme } = useTheme()
